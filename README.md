@@ -1,5 +1,5 @@
 # FSharpFsxSolution
-An example of a project with tests using FSX files using these conventions
+An example of an xplat project with tests using FSX files
 
 ## build
 
