@@ -1,0 +1,7 @@
+.fake
+.vscode
+.paket/paket.exe
+build
+packages
+paket-files
+TestResult.xml

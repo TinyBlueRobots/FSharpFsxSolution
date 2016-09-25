@@ -1,0 +1,10 @@
+source https://nuget.org/api/v2
+framework: net45
+nuget FAKE
+nuget Newtonsoft.Json
+
+group Test
+source https://nuget.org/api/v2
+framework: net45
+nuget NUnit
+nuget NUnit.Runners
