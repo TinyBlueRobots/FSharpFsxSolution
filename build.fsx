@@ -18,19 +18,8 @@ let copyLibs source dest =
 
 let build() =
   CleanDir "build"
-  if fileExists "build.files" then ReadFile "build.files" |> CopyTo "build"
   compile (sprintf "build/%s.exe" appName) FscHelper.TargetType.Exe [ "src/Main.fsx" ]
   copyLibs "paket-files/include-scripts/net45/include.main.group.fsx" "build"
-
-let retry max f =
-  let rec inner i =
-    try f()
-    with ex ->
-      logf "%O" ex
-      match i = max with
-      | true -> raise ex
-      | _ -> i + 1 |> inner
-  inner 1
 
 let tests() =
   CleanDir "tests/build"
